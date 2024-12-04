@@ -1,4 +1,4 @@
-package ru.fedorova.spring.lesson_5
+package ru.fedorova.sprint.lesson_5
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -9,7 +9,7 @@ fun main () {
 
     val doc: Document = Jsoup.connect("https://mybook.ru/author/duglas-adams/avtostopom-po-galaktike-restoran-u-konca-vselennoj/citations/").get()
 
-    val quotes: Elements = doc.select(".sc-2aegk7-2")
+    val quotes: Elements = doc.select("article")
 
     for (quote: Element in quotes) {
         println(quote.text() + "\n")
